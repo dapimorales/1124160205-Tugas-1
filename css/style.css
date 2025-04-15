@@ -1,3 +1,9 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +12,7 @@ body {
     text-align: center;
 }
 
-header, footer {
+footer {
     background-color: cornsilk;
     color: #5f524c;
     padding: 15px;
@@ -35,10 +41,15 @@ header, footer {
     box-shadow: 0px 0px 5px #ccc;
 }
 
-.section img {
+.intro img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+.gallery img {
+    width: 50%;
 }
 
 .section-links a {
@@ -49,5 +60,36 @@ header, footer {
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s, color 0.3s; /* Transisi halus */
 }
 
+.section-links a:hover {
+    background: #5f524c; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+nav {
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5f524c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #5f524c; /* Warna latar belakang saat hover */
+    color: white;
+}
